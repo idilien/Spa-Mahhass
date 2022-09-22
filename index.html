@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spa Mahhass</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Italianno&family=Lato:wght@400;700;900&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="build/css/app.css">
+</head>
+<body>
+    <header class="header container ">
+        <div class="header__grid">
+            <div class="header__logo">
+                <img src="build/img/logo-hammam.jpg" alt="logo">
+            </div>
+            <h3 class="header__title">Spa - Mahhass</h3>
+            <nav class="socials">
+                <a class="socials__link" href="https://facebook.com">
+                    <span class="socials__acces"> Facebook</span>
+                </a>
+                <a class="socials__link" href="https://twitter.com">
+                    <span class="socials__acces"> Twitter</span>
+                </a>
+                <a class="socials__link" href="https://instagram.com">
+                    <span class="socials__acces"> Instagram</span>
+                </a>
+                <a class="socials__link" href="https://youtube.com">
+                    <span class="socials__acces"> Youtube</span>
+                </a>
+                <a class="socials__link" href="https://tiktok.com">
+                    <span class="socials__acces"> tiktok</span>
+                </a>
+            </nav>
+        </div>
+
+    </header>
+
+    <div class="nav">
+        <div class="nav__border">
+            <nav class="nav__container">
+                <a class="nav__link" href="#">Inicio</a>
+                <a class="nav__link" href="#">Nosotros</a>
+                <a class="nav__link" href="#">Servicios</a>
+                <a class="nav__link" href="#">Productos</a>
+                <a class="nav__link" href="#">Contacto</a>
+            </nav>
+        </div>
+    </div>
+
+    <section class="swiper container">
+        <ul class="swiper-wrapper ">
+            <li class="swiper-slide">
+                <img class="slider__img"  src="build/img/ritual_04.jpg" alt="img slider">
+            </li>
+            <li class="swiper-slide">
+                <img class="slider__img" src="build/img/ritual_03.jpg" alt="img slider">
+            </li>
+            <li class="swiper-slide">
+                <img class="slider__img" src="build/img/ritual_07.jpg" alt="img slider">
+            </li>
+        </ul>
+        <div class="swiper-pagination"></div>
+    </section>
+
+    <section class="welcome section">
+        <h1 class="welcome__heading">bienvenida(o) a nuestro spa <span>mahhass</span></h1>
+        <p class="welcome__text">Disfruta de masajes tradicionales, tratamientos más auténticos y naturales <br> Una amplia gama de rituales de bienestar y salud únicos...</p>
+    </section>s
+
+    <section class="cards">
+        <div class="cards__grid container">
+
+            <div class="card">
+                <img class="card__img" src="build/img/service_01.jpg" alt="img card">
+                <div class="card__content">
+                    <h2 class="card__heading">Placeres del <span>mahhass</span></h2>
+                    <a class="card__link" href="#">Leer más</a>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card__img" src="build/img/service_02.jpg" alt="img card">
+                <div class="card__content">
+                    <h2 class="card__heading">Masajes a la<span>carta</span></h2>
+                    <a class="card__link" href="#">Leer más</a>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card__img" src="build/img/service_03.jpg" alt="img card">
+                <div class="card__content">
+                    <h2 class="card__heading">Tratamientos <span>faciales</span></h2>
+                    <a class="card__link" href="#">Leer más</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services container">
+        <div class="services__grid">
+            <div class="services__content">
+                <h3 class="services__heading"> Descubre los rituales tradicionales</h3>
+                <p class="services__text">Si tu deseo es combinar la experiencia del Mahhass con sus tratamientos tradicionales, te aconsejamos optar por una de nuestras fórmulas, los Rituales tradicionales.</p>            
+                <!-- <table>
+                    <thead>
+                        <tr>
+                            <th class="table__th">Actividades</th>
+                            <th class="table__th">Día</th>
+                            <th class="table__th">Hora</th>
+                        </tr>
+                    </thead>
+
+                    <tbody class="table__tbody">
+                        <tr class="table__tr">
+                            <td table__td>Pilates</td>
+                            <td table__td>lunes</td>
+                            <td table__td>9:00</td>
+                        </tr>
+                        <tr class="table__tr">
+                            <td table__td>Yoga</td>
+                            <td table__td>martes</td>
+                            <td table__td>11:00</td>
+                        </tr>
+                        <tr class="table__tr">
+                            <td table__td>Postural</td>
+                            <td table__td>miercoles</td>
+                            <td table__td>9:00</td>
+                        </tr>
+                        <tr class="table__tr">
+                            <td table__td>Yoga</td>
+                            <td table__td>jueves</td>
+                            <td table__td>9:00</td>
+                        </tr>
+                        <tr class="table__tr">
+                            <td table__td>Pilates</td>
+                            <td table__td>viernes</td>
+                            <td table__td>8:00</td>
+                        </tr>
+                        <tr class="table__tr">
+                            <td table__td>Yoga</td>
+                            <td table__td>sabado</td>
+                            <td table__td>8:00</td>
+                        </tr>
+                    </tbody>
+                </table> -->
+            </div>
+        </div>
+    </section>
+
+    <main class="rituals container ">
+        <h2 class="rituals__heading">nuestros <span>rutiales</span></h2>
+        <div class="rituals__grid">
+
+            <div class="ritual">
+                    <div class="ritual__mask">
+                    <img class="ritual__img" src="build/img/ritual_05.jpg" alt="img ritual">
+                    </div>    
+                    <div class="ritual__content">
+                        <h3 class="ritual__heading">RITUAL AL MEDINA</h3>
+                        <p class="ritual__descrip">Sesión hammam + Exfoliación Oriental + Masaje Oriental  + Masaje manos y pies +20/40 min  || 110/130 min aprox.</p>
+                        <a class="card__link" href="#">Leer más</a>
+                    </div>
+            </div>
+
+            <div class="ritual">
+                    <div class="ritual__mask">
+                    <img class="ritual__img"  src="build/img/ritual_06.jpg" alt="img ritual">
+                     </div>   
+                    <div class="ritual__content">
+                        <h3 class="ritual__heading">RITUAL ORIENTAL</h3>
+                        <p class="ritual__descrip">Sesión hammam + Exfoliación Oriental + Envoltura de Rhassoul y Karité + Masaje Oriental 20/40 min  ||  125/145 min aprox.</p>
+                        <a class="card__link" href="#">Leer más</a>
+                    </div>
+            </div>   
+            
+            <div class="ritual">
+                    <div class="ritual__mask">
+                    <img class="ritual__img" src="build/img/ritual_08.jpg" alt="img ritual">
+                   </div>
+                    <div class="ritual__content">
+                        <h3 class="ritual__heading">RITUAL DE LAS 1001 NOCHES</h3>
+                        <p class="ritual__descrip">Sesión hammam + Exfoliación Oriental + Envoltura de Rhassoul y Karité + Masaje Oriental 40 min + Masaje cuero cabelludo  ||  160 min aprox.</p>
+                        <a class="card__link" href="#">Leer más</a>
+                    </div>    
+            </div>
+
+            <div class="ritual">
+                    <div class="ritual__mask">
+                    <img class="ritual__img" src="build/img/ritual_09.jpg" alt="img ritual">
+                      </div>
+                    <div class="ritual__content">
+                        <h3 class="ritual__heading">RITUAL SUPREME ARGÁN</h3>
+                        <p class="ritual__descrip">Sesión hammam  + Envoltura de Rhassoul y Karité + Masaje corporal Supreme Argán 40 min + Soin Ceremonia Supreme Argán + Aceite facial de Argán de obsequio || 215 min aprox.</p>
+                        <a class="card__link" href="#">Leer más</a>
+                    </div>    
+            </div>
+        </div>
+    </main>
+
+
+    <section class="book ">
+        <h2 class="book__heading" >cheque regalo</h2>
+        <p class="book__text">Nuestros Cheques Regalos vienen personalizados con el nombre de la(s) persona(s) a la(s) cual(es) quieres obsequiarlos. Tienen una validez de 12 meses.
+
+            Para obtener tu(s) Cheque(s) Regalo, puedes acudir a nuestro centro. Si no tienes la posibilidad de desplazarte, puedes adquirirlos a través de nuestra tienda on-line con 2 opciones :</p>
+        <a class="book__link" href="#">reservar</a>
+    </section>
+
+    <footer class="footer section">
+        <div class="footer__grid container">
+            <div class="footer__widget">
+                <h3 class="footer__heading">nosotros</h3>
+                <p class="footer__text">Las bondades del calor húmedo del hammam y la interesante variedad de tratamientos y propuestas del spa (provenientes de secretos de belleza y salud susurrados generación tras generación, en la intimidad de los hammams de Marruecos y Turquía) serán los artífices de una relajación y un equilibrio duraderos. </p>
+            </div>
+            <div class="footer__widget">
+                <h3 class="footer__heading">horario</h3>
+                <p class="footer__text"> Lun-Vie: 8:00 - 20:00</p>
+                <p class="footer__text"> Sab-Dom: 10:00 - 22:00</p>
+            </div>
+            <div class="footer__widget">
+                <h3 class="footer__heading">Contacto</h3>
+                <p class="footer__text">Gran Via, 111</p>
+                <nav class="socials">
+                    <a class="socials__link" href="https://facebook.com">
+                        <span class="socials__acces"> Facebook</span>
+                    </a>
+                    <a class="socials__link" href="https://twitter.com">
+                        <span class="socials__acces"> Twitter</span>
+                    </a>
+                    <a class="socials__link" href="https://instagram.com">
+                        <span class="socials__acces"> Instagram</span>
+                    </a>
+                    <a class="socials__link" href="https://youtube.com">
+                        <span class="socials__acces"> Youtube</span>
+                    </a>
+                    <a class="socials__link" href="https://tiktok.com">
+                        <span class="socials__acces"> tiktok</span>
+                    </a>
+                </nav>
+            </div>
+        </div>
+
+        <p class="footer__copy"> 2022 Spa Mahhass. Todos los derechos reservados</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
