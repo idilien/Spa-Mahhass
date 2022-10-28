@@ -318,7 +318,7 @@ html {
 }
 
 body {
-  background-color: #050100;
+  background-color: #242424;
   font-family: "Lato", sans-serif;
   font-size: 1.6rem;
 }
@@ -380,7 +380,7 @@ a {
   border-radius: 5rem;
   border: 0.2rem solid #ECDDB0;
   padding: 0.5rem;
-  color: #050100;
+  color: #242424;
   font-size: 1.5rem;
   display: inline-block;
   text-align: center;
@@ -398,7 +398,7 @@ a {
 }
 
 .boton-negro {
-  background-color: #050100;
+  background-color: #242424;
   border-radius: 5rem;
   border: 0.2rem solid #ECDDB0;
   padding: 0.5rem;
@@ -416,7 +416,7 @@ a {
   }
 }
 .boton-negro:hover {
-  background-color: black;
+  background-color: #0b0b0b;
 }
 
 .header {
@@ -430,22 +430,38 @@ a {
 @media (min-width: 768px) {
   .header__grid {
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
+  }
+}
+.header__flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .header__flex {
+    flex-direction: row;
+    justify-content: space-around;
   }
 }
 .header__logo {
-  width: 10rem;
+  width: 8rem;
 }
 .header__title {
   color: #B3A06C;
   text-transform: uppercase;
   font-family: "Italianno", sans-serif;
-  font-size: 4rem;
+  font-size: 5rem;
+}
+@media (min-width: 768px) {
+  .header__title {
+    margin-left: 2rem;
+    font-size: 6rem;
+  }
 }
 
 .nav {
-  background-color: rgba(51, 34, 7, 0.3764705882);
-  margin: 5rem 0;
+  margin: 2rem 0;
   padding: 1rem 0;
 }
 .nav__container {
@@ -513,62 +529,74 @@ a {
   display: block;
 }
 
-.swiper {
-  padding: 3rem 0;
-}
-
-.swiper-slide {
-  background-position: center;
-  background-size: cover;
-}
-
-.swiper-slide img {
-  display: block;
-  width: 90%;
+.slider {
+  max-width: 1600px;
   margin: 0 auto;
-  border-radius: 1rem;
-  background-size: cover;
+  overflow: hidden;
 }
-
-.swiper-cube .swiper-cube-shadow:before {
-  background-color: rgba(246, 237, 231, 0.702);
+.slider__slide {
+  height: 90%;
+  flex-shrink: 0;
+  position: absolute;
+  transition-property: transform;
 }
-
-.swiper-pagination-bullet {
-  background: white;
+.slider__slide {
+  position: relative;
 }
-
-.swiper-pagination-bullet-active {
-  background: #ab754e;
+.slider__img {
+  width: 100%;
+}
+.slider .swiper-button-next, .slider .swiper-button-prev {
+  color: #242424;
 }
 
 .welcome {
-  text-align: center;
+  position: absolute;
+  left: 10%;
 }
-.welcome__heading {
+@media (min-width: 768px) {
+  .welcome {
+    left: 30%;
+  }
+}
+.welcome__title {
   text-align: center;
-  color: #ab754e;
+  color: #f6f3ee;
   font-family: "Italianno", sans-serif;
   line-height: 1;
-  font-weight: 400;
   text-transform: lowercase;
-  font-size: 4rem;
+  font-weight: 400;
+  font-size: 3rem;
 }
-.welcome__heading span {
-  color: #f6f3ee;
+.welcome__title span {
+  font-weight: 700;
+  margin: 1rem 0;
+  letter-spacing: 5px;
+  color: #ECDDB0;
   display: block;
   text-transform: uppercase;
   font-family: "Italianno", sans-serif;
-  font-size: 3.5rem;
+  font-size: 2rem;
+}
+@media (min-width: 768px) {
+  .welcome__title {
+    font-size: 5rem;
+  }
+  .welcome__title span {
+    font-size: 4rem;
+  }
 }
 .welcome__text {
+  margin: 2rem auto;
   font-size: 1.8rem;
   color: #ECDDB0;
   max-width: 50rem;
-  margin: 2rem auto;
-  line-height: 1.5;
+  line-height: 1.8;
 }
 
+.cards {
+  padding-top: 10rem;
+}
 @media (min-width: 768px) {
   .cards__grid {
     display: grid;
@@ -600,11 +628,11 @@ a {
   transform: rotate(4deg) scale(1.2);
 }
 .card__content {
-  max-width: 70%;
+  max-width: 90%;
   margin: 0 auto;
   border-radius: 1rem;
   border: 0.3rem solid #ECDDB0;
-  background-color: #050100;
+  background-color: #242424;
   transform: translateY(-2rem);
 }
 .card__heading {
@@ -618,6 +646,8 @@ a {
   margin-bottom: 0.1rem;
 }
 .card__heading span {
+  margin: 1rem 0;
+  letter-spacing: 5px;
   color: #f6f3ee;
   display: block;
   text-transform: uppercase;
@@ -625,7 +655,7 @@ a {
   font-size: 3.5rem;
 }
 .card__link {
-  background-color: #050100;
+  background-color: #242424;
   border-radius: 5rem;
   border: 0.2rem solid #ECDDB0;
   padding: 0.5rem;
@@ -645,12 +675,13 @@ a {
   }
 }
 .card__link:hover {
-  background-color: black;
+  background-color: #0b0b0b;
 }
 
 .services {
+  max-width: 1600px;
   margin: 10rem auto;
-  background-image: linear-gradient(to bottom, #050100 0%, #050100 40%, transparent 60%), url(../img/hammam.jpg);
+  background-image: linear-gradient(to bottom, black 0%, black 40%, transparent 60%), url(../img/hammam.jpg);
   background-repeat: no-repeat;
   background-position: bottom;
   color: #f6f3ee;
@@ -658,7 +689,7 @@ a {
 }
 @media (min-width: 768px) {
   .services {
-    background-image: linear-gradient(to right, #050100 0%, #050100 40%, transparent 60%), url(../img/hammam.jpg);
+    background-image: linear-gradient(to right, black 0%, black 40%, transparent 60%), url(../img/hammam.jpg);
     background-position: right;
   }
 }
@@ -678,14 +709,25 @@ a {
   margin: 0 1rem;
 }
 .services__heading {
+  padding-left: 4rem;
   color: #ECDDB0;
   margin-top: 10rem;
 }
 .services__text {
+  padding-left: 4rem;
   color: #ECDDB0;
   margin-bottom: 10rem;
 }
 
+.rituals {
+  max-width: 1600px;
+  margin: 0 3rem;
+}
+@media (min-width: 1200px) {
+  .rituals {
+    margin: 0 auto;
+  }
+}
 .rituals__heading {
   text-align: center;
   color: #ab754e;
@@ -697,6 +739,8 @@ a {
   margin-bottom: 5rem;
 }
 .rituals__heading span {
+  margin: 1rem 0;
+  letter-spacing: 5px;
   color: #f6f3ee;
   display: block;
   text-transform: uppercase;
@@ -710,7 +754,7 @@ a {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-@media (min-width: 1024px) {
+@media (min-width: 1200px) {
   .rituals__grid {
     display: grid;
     gap: 2rem;
@@ -728,6 +772,7 @@ a {
 }
 .ritual__img {
   width: 100%;
+  height: 300px;
   border-radius: 1rem;
   transition-property: transform;
   transition-duration: 300ms;
@@ -736,7 +781,7 @@ a {
   transform: scale(1.2);
 }
 .ritual__content {
-  padding: 2rem;
+  padding: 1rem;
 }
 @media (min-width: 768px) {
   .ritual__content {
@@ -752,7 +797,7 @@ a {
   text-align: center;
 }
 .ritual__descrip {
-  margin: 0;
+  margin: 5px 3rem;
 }
 .ritual__price {
   text-align: center;
@@ -783,7 +828,7 @@ a {
   line-height: 2;
 }
 .book__link {
-  background-color: #050100;
+  background-color: #242424;
   border-radius: 5rem;
   border: 0.2rem solid #ECDDB0;
   padding: 0.5rem;
@@ -803,7 +848,7 @@ a {
   }
 }
 .book__link:hover {
-  background-color: black;
+  background-color: #0b0b0b;
 }
 
 .footer {
@@ -842,4 +887,195 @@ a {
   border-top: 1px solid #ab754e;
   font-size: 1.6rem;
   padding: 2rem;
+}
+
+@media (min-width: 1200px) {
+  .ritualsBooking {
+    width: 95%;
+    max-width: 1600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+  }
+}
+.ritualsBooking__heading {
+  text-align: center;
+  color: #ab754e;
+  font-family: "Italianno", sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  text-transform: lowercase;
+  font-size: 4rem;
+  margin-bottom: 5rem;
+}
+.ritualsBooking__heading span {
+  margin: 1rem 0;
+  letter-spacing: 5px;
+  color: #f6f3ee;
+  display: block;
+  text-transform: uppercase;
+  font-family: "Italianno", sans-serif;
+  font-size: 3.5rem;
+}
+.ritualsBooking__grid {
+  width: 100%;
+  margin: 0 auto;
+}
+.ritualBooking {
+  width: 400px;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  border-radius: 1rem;
+  border: 0.3rem solid #ECDDB0;
+}
+@media (min-width: 768px) {
+  .ritualBooking {
+    width: 750px;
+    height: 220px;
+    display: flex;
+    flex-direction: row;
+  }
+}
+.ritualBooking__mask {
+  overflow: hidden;
+}
+.ritualBooking__img {
+  width: 100%;
+  height: 300px;
+  border-radius: 1rem;
+  transition-property: transform;
+  transition-duration: 300ms;
+}
+.ritualBooking__img:hover {
+  transform: scale(1.2);
+}
+.ritualBooking__content {
+  padding: 2rem;
+}
+.ritualBooking__heading {
+  margin: 0;
+  color: #f6f3ee;
+}
+.ritualBooking__descrip {
+  margin: 0.5rem 3rem;
+}
+.ritualBooking__price {
+  text-align: center;
+}
+
+.group2 {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.title__heading {
+  text-align: center;
+  color: #ECDDB0;
+  text-transform: uppercase;
+  font-size: 3rem;
+}
+
+.form {
+  margin: 0 auto;
+  max-width: 60rem;
+  border-radius: 1rem;
+}
+.form__fieldset {
+  padding: 0 3rem;
+  margin: 2rem 0;
+  border-color: #B3A06C;
+  border-radius: 1rem;
+}
+.form__legend {
+  padding: 1rem;
+  margin-bottom: 3rem;
+  color: #ECDDB0;
+  background-color: #ab754e;
+  width: 100%;
+  border-radius: 3px;
+  text-align: center;
+  font-weight: 900;
+}
+.form__camp {
+  margin: 2rem 0;
+  color: #f6f3ee;
+  display: flex;
+}
+.form__label {
+  padding: 1rem;
+  color: #f6f3ee;
+  flex-basis: 10rem;
+}
+.form__input {
+  flex: 1;
+  border: none;
+  background-color: #ECDDB0;
+}
+.form__button {
+  width: 100%;
+  background-color: #242424;
+  border-radius: 5rem;
+  border: 0.2rem solid #ECDDB0;
+  padding: 0.5rem;
+  color: #ECDDB0;
+  font-size: 1.5rem;
+  display: inline-block;
+  text-align: center;
+  text-transform: uppercase;
+  transition: background-color;
+  transition-duration: 300ms;
+  padding: 1rem 5rem;
+  cursor: pointer;
+}
+@media (min-width: 768px) {
+  .form__button {
+    width: auto;
+  }
+}
+.form__button:hover {
+  background-color: #0b0b0b;
+}
+
+.control__quote {
+  padding: 5rem;
+  margin: 3rem auto;
+  max-width: 60rem;
+  border-radius: 1rem;
+  border: 0.3rem solid #ECDDB0;
+}
+.control__name {
+  font-size: 2rem;
+  color: #f6f3ee;
+}
+.control__name .span {
+  font-weight: 700;
+}
+.control__btnDelete {
+  width: 100%;
+  background-color: #242424;
+  border-radius: 5rem;
+  border: 0.2rem solid #ECDDB0;
+  padding: 0.5rem;
+  color: #ECDDB0;
+  font-size: 1.5rem;
+  display: inline-block;
+  text-align: center;
+  text-transform: uppercase;
+  transition: background-color;
+  transition-duration: 300ms;
+  padding: 1rem 5rem;
+  margin: 2rem;
+  cursor: pointer;
+}
+@media (min-width: 768px) {
+  .control__btnDelete {
+    width: auto;
+  }
+}
+.control__btnDelete:hover {
+  background-color: #0b0b0b;
+}
+.control__svg {
+  width: 2rem;
 }
